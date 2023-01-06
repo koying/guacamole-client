@@ -787,6 +787,8 @@ END
     set_optional_property "saml-compress-request"            "$SAML_COMPRESS_REQUEST"
     set_optional_property "saml-compress-response"           "$SAML_COMPRESS_RESPONSE"
     set_optional_property "saml-group-attribute"             "$SAML_GROUP_ATTRIBUTE"
+    set_optional_property "saml-x509-cert-path"              "$SAML_X509_CERT_PATH"
+    set_optional_property "saml-private-key-path"            "$SAML_PRIVATE_KEY_PATH"
 
     # Add required .jar files to GUACAMOLE_EXT
     # "1-{}" make it sorted as a first provider (only authentication)
@@ -1154,6 +1156,9 @@ fi
 
 # Set extension priority if specified
 set_optional_property "extension-priority" "$EXTENSION_PRIORITY"
+
+# Set extension skup if specified
+set_optional_property "skip-if-unavailable" "$SKIP_IF_UNAVAILABLE"
 
 # Use api-session-timeout if specified.
 if [ -n "$API_SESSION_TIMEOUT" ]; then
