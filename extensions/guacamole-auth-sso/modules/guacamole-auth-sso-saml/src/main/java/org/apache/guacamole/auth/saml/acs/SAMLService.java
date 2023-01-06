@@ -94,7 +94,7 @@ public class SAMLService {
             // Create the request URL for the SAML IdP
             String requestUrl = auth.login(
                     identifier,
-                    new AuthnRequestParams(false, false, true),
+                    new AuthnRequestParams(false, false, false),
                     true);
 
             // Create a new authentication session to represent this attempt while
